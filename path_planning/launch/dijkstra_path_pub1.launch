@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+    <node pkg="path_planning" type="mgeo_pub.py" name="mgeo_pub"  />
+    <node pkg="path_planning" type="gpsimu_parser.py" name="gpsimu_parser" />
+    <node pkg="path_planning" type="mgeo_dijkstra_path_1.py" name="mgeo_dijkstra_path"  />
+    <node pkg="path_planning" type="local_path_pub.py" name="local_path_pub" />
+    <node pkg="path_planning" type="tf_pub.py" name="tf"  />
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d home/hyjoe/final_project/src/detection/rviz/lane_detection_rviz.rviz" />
+</launch>
